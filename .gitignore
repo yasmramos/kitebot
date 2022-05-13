@@ -2,3 +2,4 @@ herokuu.bat
 src/env.py
 .env
 src/__pycache__
+debug.log
