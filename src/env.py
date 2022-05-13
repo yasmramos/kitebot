@@ -1,1 +1,1 @@
-BOT_KEY = ""
+TOKEN = "5174663576:AAF1RrylisV_rHbHCWRkPBaIfpp4fR2ArQgKeep"
