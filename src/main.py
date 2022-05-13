@@ -3,6 +3,7 @@ import os
 
 from zipmanager import ZipManager
 
+#Get token from heroku
 TOKEN = os.getenv('TOKEN')
 
 if __name__ == "__main__":
