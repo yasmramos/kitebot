@@ -17,15 +17,22 @@ class Kite(object):
 
     def __init__(self, token: str) -> None:
         self.token = token
-        #Crear la aplicacion y pasar el Token
+        # Crear la aplicacion y pasar el Token
         self.application = Application.builder().token(token).build()
-        #Añadiendo manejadores de comandos
-        self.application.add_handler(CommandHandler(["start", "help"], self.start))
+        # Añadiendo manejadores de comandos
+        self.application.add_handler(CommandHandler(
+            ["start", "help"], self.start))
 
     async def start(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Envia explicacion de como se usa el bot."""
-        await update.message.reply_text("Hi! Use /help to get all comands")
-    
+        """Muestra informacion de como se usa el bot."""
+        self.help(update, context)
+
+    async def help(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        """Muestra informacion de como se usa el bot."""
+        await update.message.reply_text(
+            "Usa /start para iniciar el bot. Use /help para obtener una lista de los comandos permitidos"
+        )
+
     async def run(self):
         """Ejecuta el bot"""
         self.application.run_polling()
