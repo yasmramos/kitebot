@@ -1,11 +1,12 @@
-#!/usr/bin/env python
-# pylint: disable=unused-argument
-
-from kite import Kite
+#from kite import Kite
 import os
+
+from zipmanager import ZipManager
 
 TOKEN = os.getenv('TOKEN')
 
 if __name__ == "__main__":
-    kite = Kite(TOKEN)
-    kite.run()
+    #kite = Kite(TOKEN)
+    #kite.run()
+    zip  = ZipManager()
+    zip.create_zip("file.zip", ".")
