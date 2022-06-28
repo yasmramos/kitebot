@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# pylint: disable=unused-argument
-
 import logging
 import urllib3
 from telegram import Update, ReplyKeyboardMarkup
